@@ -11,7 +11,7 @@ public class EmployeeWageBuilder4 {
 		System.out.println("Welcome to Employee Wage Computation");
 		}
 
-	void Attendance(){
+	void DailyWage(){
 
 		while(day <= month){
 			int empCheck=(int) Math.floor(Math.random() * 10) % 3;
@@ -34,7 +34,7 @@ public class EmployeeWageBuilder4 {
 	}
 
 	void Wage(){
-		Attendance();
+		DailyWage();
 
 		int Payment = WagePerHour * NoOfHours;
 		System.out.println("Employee wage is "+Payment);
