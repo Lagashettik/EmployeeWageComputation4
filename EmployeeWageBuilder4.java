@@ -5,6 +5,7 @@ public class EmployeeWageBuilder4 {
 	int NoOfHours=0;
 	int month=20;
 	int day=1;
+	int MaxHours=100;
 
 	EmployeeWageBuilder4() {
 		System.out.println("Welcome to Employee Wage Computation");
@@ -27,18 +28,20 @@ public class EmployeeWageBuilder4 {
 				break;
 			}
 		day++;
+		if(MaxHours <= NoOfHours)
+				break;
 		}
 	}
 
-	void DailyWage(){
+	void Wage(){
 		Attendance();
 
 		int Payment = WagePerHour * NoOfHours;
-		System.out.println("Daily wage is "+Payment);
+		System.out.println("Employee wage is "+Payment);
 	}
 
 	public static void main(String args[]){
 	EmployeeWageBuilder4 Emp= new EmployeeWageBuilder4();
-	Emp.DailyWage();
+	Emp.Wage();
 	}
 }
