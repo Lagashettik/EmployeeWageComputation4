@@ -14,17 +14,19 @@ public class EmployeeWageBuilder4 {
 		// empCheck=1 Employee is Present
 		// empCheck=2 Employee is Part Time
 
-		if(empCheck == 0){
-			System.out.println("Employee is Absent");
-			NoOfHours=0;
-			}
-		else if(empCheck == 1){
-			System.out.println("Employee is Present");
-			NoOfHours=8;
-			}
-		else{
-			System.out.println("Employee is Part Time");
-			NoOfHours=4;
+		switch (empCheck) {
+			case 1:
+				System.out.println("Employee is Full Time");
+				NoOfHours=8;
+				break;
+		case 2:
+				System.out.println("Employee is Part Time");
+				NoOfHours=4;
+				break;
+		case 0:
+				System.out.println("Employee is absent");
+				NoOfHours=0;
+				break;
 			}
 	}
 
